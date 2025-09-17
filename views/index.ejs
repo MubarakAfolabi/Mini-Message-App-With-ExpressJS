@@ -6,16 +6,27 @@
     <title>Mini Message App</title>
   </head>
   <body>
-    <h1><%= title %></h1>
+    <header>
+      <h1><%= title %></h1>
+    </header>
 
-    <ul>
-      <% messages.forEach(message => { %>
-      <li>
-        <p><%= message.text %></p>
-        <h3><%= message.user %></h3>
-        <p><%= message.added %></p>
-      </li>
-      <% }) %>
-    </ul>
+    <main>
+      <ul>
+        <% messages.forEach((message, index) => { %>
+        <li>
+          <p><%= message.text %></p>
+          <h3><%= message.user %></h3>
+          <p><%= message.added %></p>
+          <a href="/message/<%= index %>">
+            <button>Open Message</button>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+
+      <a href="/new">
+        <button>Add Message</button>
+      </a>
+    </main>
   </body>
 </html>

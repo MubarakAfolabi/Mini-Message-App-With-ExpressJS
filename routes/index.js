@@ -24,4 +24,4 @@ indexRouter.post("/new", (req, res) => {
   res.redirect("/");
 });
 
-module.exports = indexRouter;
+module.exports = { indexRouter, messages };
