@@ -1,9 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 const path = require("node:path");
-const { indexRouter } = require("./routes/index.js");
-const formRouter = require("./routes/form.js");
-const messageRouter = require("./routes/message.js");
+const indexRouter = require("./routes/indexRouter.js");
+const formRouter = require("./routes/formRouter.js");
+const messageRouter = require("./routes/messageRouter.js");
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
