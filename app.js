@@ -22,4 +22,5 @@ app.listen(PORT, (err) => {
     throw err;
   }
   console.log(`Listening on Port ${PORT}`);
+  console.log(process.env.DATABASE_URL);
 });
