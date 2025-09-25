@@ -14,10 +14,10 @@
       <ul>
         <% messages.forEach((message, index) => { %>
         <li>
-          <h3><%= message.user %></h3>
+          <h3><%= message.author %></h3>
           <p><%= message.text %></p>
-          <p><%= message.added %></p>
-          <a href="/message/<%= index %>">
+          <p><%= message.date %></p>
+          <a href="/message/<%= index + 1 %>">
             <button>Open Message</button>
           </a>
         </li>

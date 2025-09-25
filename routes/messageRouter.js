@@ -3,6 +3,6 @@ const messageController = require("../controllers/messageController");
 
 const messageRouter = Router();
 
-messageRouter.get("/:messageId", messageController.messageGet);
+messageRouter.get("/:id", messageController.messageGet);
 
 module.exports = messageRouter;

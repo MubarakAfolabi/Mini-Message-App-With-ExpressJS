@@ -1,18 +1,8 @@
-const messages = [
-  {
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date(),
-  },
-  {
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date(),
-  },
-];
+const db = require("../db/queries");
 
-const listMessage = (req, res) => {
+async function listMessage(req, res) {
+  const messages = await db.getAllMessages();
   res.render("index", { title: "Mini Message Board", messages: messages });
-};
+}
 
-module.exports = { messages, listMessage };
+module.exports = { listMessage };
